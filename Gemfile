@@ -45,3 +45,10 @@ group :development do
   gem 'spring'
 end
 
+# gems for login setup
+gem 'therubyracer'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-digitalocean'
+gem 'omniauth-facebook'
+
