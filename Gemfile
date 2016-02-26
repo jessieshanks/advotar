@@ -48,7 +48,18 @@ end
 # gems for login setup
 gem 'therubyracer'
 gem 'devise'
-gem 'omniauth'
+
+#figaro
+gem 'figaro'
+
+#gems for evernote omniauth
+gem 'evernote-thrift'
+gem 'multi_json'
+
+# gem 'omniauth'
+gem 'omniauth-oauth2'
 gem 'omniauth-digitalocean'
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2', '~> 0.2.1'
+gem 'omniauth-evernote'
 
