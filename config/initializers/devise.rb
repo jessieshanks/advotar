@@ -241,11 +241,14 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
 
-  Devise.setup do |config|
-  config.omniauth :google_oauth2, ENV["GOOGLE_OAUTH_CLIENT_ID"], ENV["GOOGLE_OAUTH_SECRET"], {
-    scope: "email"
-  }
-  end
+  config.omniauth :google_oauth2, ENV["GOOGLE_OAUTH_CLIENT_ID"], ENV["GOOGLE_OAUTH_CLIENT_SECRET"],
+    {
+      :name => "google",
+      :scope => "email, profile, plus.me, https://www.googleapis.com/auth/calendar, https://www.googleapis.com/auth/drive, https://www.googleapis.com/auth/drive.file, https://www.googleapis.com/auth/gmail.send, https://www.googleapis.com/auth/contacts",
+      :prompt => "select_account",
+      :image_aspect_ratio => "square",
+      :image_size => 50
+    }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
