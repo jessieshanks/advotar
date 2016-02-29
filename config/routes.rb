@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resources :warriors
+  resources :squads
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
-  resources :products
-  root 'products#index'
+  # resources :products
+  root 'squads#index'
 
 
 

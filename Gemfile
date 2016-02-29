@@ -52,14 +52,15 @@ gem 'devise'
 #figaro
 gem 'figaro'
 
+#google api
+gem 'google-api-client'
+
 # #gems for evernote omniauth
 # gem 'evernote-thrift'
 # gem 'multi_json'
 
 # gem 'omniauth'
 gem 'omniauth-oauth2'
-# gem 'omniauth-digitalocean'
-# gem 'omniauth-facebook'
-gem 'omniauth-google-oauth2', '~> 0.2.1'
+gem 'omniauth-google-oauth2'
 # gem 'omniauth-evernote'
 
