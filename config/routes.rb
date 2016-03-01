@@ -5,8 +5,11 @@ Rails.application.routes.draw do
   # resources :products
   root 'squads#index'
 
-
-
+# GmailAlerts::Application.routes.draw do
+#   root to: 'sessions#new'
+#   resources :sessions, only: :index
+#   get "/auth/:provider/callback" => 'sessions#create'
+# end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
