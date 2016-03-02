@@ -2,14 +2,7 @@ Rails.application.routes.draw do
   resources :warriors
   resources :squads
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
-  # resources :products
   root 'squads#index'
-
-# GmailAlerts::Application.routes.draw do
-#   root to: 'sessions#new'
-#   resources :sessions, only: :index
-#   get "/auth/:provider/callback" => 'sessions#create'
-# end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -64,6 +57,5 @@ Rails.application.routes.draw do
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  #     #   end
 end
