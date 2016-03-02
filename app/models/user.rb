@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   end
 
   def has_squad?
-    !(user.squad_id.blank?)
+    !(self.squad.blank?)
   end
 
 

@@ -1,25 +1,26 @@
 class SquadsController < ApplicationController
-  before_action :set_user
+  # before_action :set_user, :set
 
 
-  # before_action :set_squad, only: [:show, :edit, :update, :destroy]
+  before_action :set_squad, only: [:show, :edit, :update, :destroy]
 
 
   # GET /squads
   # GET /squads.json
   def index
-    if @user.has_squad?
-      :new
+    if @squad.user.has_squad?
+      render :show
     else
-      :show
+      render :new
     end
+    @squads = Squad.all
+    puts @squads
+
   end
 
   #   @squads = Squad.all
   # end
 
-
-ruby on rails - how to use model in different controller in RoR - Stack Overflow
   # GET /squads/1
   # GET /squads/1.json
   def show
@@ -76,16 +77,25 @@ ruby on rails - how to use model in different controller in RoR - Stack Overflow
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params(:user_id))
-    end
+    # def set_user
+    #   @user = User.find(params[:id])
+    # end
+
+    # def set_squad
+    #   @squad = @user.squad
+    # end
 
     def set_squad
-      @squad = Squad.find(params[@user.squad_id])
-    end
+      @squad = Squad.where("user_id" => session[user_id]).first
+      # @squad = squad.last
+      @users = @squad.users
+      puts "method"
+      puts @squad
+      puts @user
+      # @squad = Squad.find(params[:id])
 
-    def set_squad
-      @squad = Squad.find(params[:id])
+
+
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def squad_params
