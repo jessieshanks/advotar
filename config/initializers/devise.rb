@@ -1,3 +1,5 @@
+require "omniauth-google-oauth2"
+
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -241,14 +243,13 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
 
-  config.omniauth :google_oauth2, ENV["GOOGLE_OAUTH_CLIENT_ID"], ENV["GOOGLE_OAUTH_CLIENT_SECRET"],
-    {
-      :name => "google",
-      :scope => "email, profile, plus.me, https://www.googleapis.com/auth/calendar, https://www.googleapis.com/auth/drive, https://www.googleapis.com/auth/drive.file, https://www.googleapis.com/auth/gmail.send, https://www.googleapis.com/auth/contacts",
-      :prompt => "select_account",
-      :image_aspect_ratio => "square",
-      :image_size => 50
-    }
+  config.omniauth :google_oauth2,
+  ENV["GOOGLE_OAUTH_CLIENT_ID"],
+  ENV["GOOGLE_OAUTH_CLIENT_SECRET"],
+  {
+    :skip_jwt => true,
+    :scope => "email, profile, plus.me, https://www.googleapis.com/auth/drive, https://www.googleapis.com/auth/drive.file"
+  }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
