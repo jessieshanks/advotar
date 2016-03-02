@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>My Squad</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Motto</th>
+      <th colspan="15"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @squads.each do |squad| %>
+      <tr>
+        <td><%= squad.name %></td>
+        <td><%= squad.motto %></td>
+        <td><%= link_to 'Show', squad %></td>
+        <td><%= link_to 'Edit', edit_squad_path(squad) %></td>
+        <td><%= link_to 'Destroy', squad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Squad', new_squad_path %>
