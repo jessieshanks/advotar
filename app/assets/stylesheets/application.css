@@ -1,21 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-
-
 
 #index-main {
   margin: 0% 5% 5% 0%;
@@ -72,7 +54,7 @@
 }
 
 #index-text h3 {
-  font: 36px Bangers;
+  font: 22px Bangers;
   font-weight: bolder;
   text-align: center;
 }
@@ -89,7 +71,7 @@
   font: 25px 'Bangers';
   height: 2.6em;
   padding: .8em;
-  margin-top: 43vh;
+  margin-top: 30vh;
 }
 
 #login-button:hover {
@@ -122,6 +104,8 @@ footer {
 
 footer p {
   font: 14px 'Oswald';
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -132,7 +116,12 @@ footer p {
    #login-button {
     margin-top: 33vh;
   }
-
+  #index-text h3 {
+  font: 30px Bangers;
+}
+  #login-button {
+      margin-top: 35vh;
+    }
 }
 
 
@@ -155,7 +144,9 @@ footer p {
   footer {
     visibility: visible;
   }
-}
+  #index-text h3 {
+  font: 36px Bangers;
+  }
 
 
 
