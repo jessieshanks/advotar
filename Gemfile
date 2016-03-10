@@ -65,4 +65,4 @@ gem 'omniauth-google-oauth2'
 # gem 'omniauth-evernote'
 
 #heroku gem
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
