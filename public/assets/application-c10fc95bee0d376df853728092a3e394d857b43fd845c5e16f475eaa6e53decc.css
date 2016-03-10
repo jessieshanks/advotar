@@ -2,7 +2,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Bangers|Oswald:400,900italic,900,800italic,800,700italic|Roboto|Molengo);
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css);
-
+@import image-url('advotar.jpg');
 
 
 #index-main {
@@ -26,7 +26,6 @@
 #advotar-container {
     height: 100vh;
     background-color: transparent;
-    background-image: url('advotar.jpg');
     position: absolute;
     overflow: hidden;
     margin-top: 0vh;
