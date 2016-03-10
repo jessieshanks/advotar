@@ -1,0 +1,12 @@
+@font-face {
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 400;
+src: url(https://static.canva.com/static/webfonts/Oswald-Regular.woff) format('woff');
+}
+@font-face {
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+src: url(https://static.canva.com/static/webfonts/Oswald-Bold.woff) format('woff');
+}
