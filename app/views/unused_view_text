@@ -1,23 +1,25 @@
 
+<!-- from squad show view -->
 
-<%= render 'layouts/header' %>
+<%= link_to 'New Warrior', new_warrior_path %>
+
+<%= link_to 'Edit', edit_squad_path(@squad) %> |
+<%= link_to 'Back', squads_path %>
+
+<p id="notice"><%= notice %></p>
 
 
+<p>
+  <strong>Name:</strong>
+  <%= @squad.name %>
+</p>
 
-<div class="page-title-tron container-fluid col-md-10 col-md-offset-1" id="sqad-box">
-  <div class="page-title" id="show-squad-title"><h1><%= @squad.name %></h1></div>
-  <div id="show-squad-motto"><h3><%= @squad.motto %></h3></div>
-</div>
+<p>
+  <strong>Motto:</strong>
+  <%= @squad.motto %>
+</p>
 
-
-<div class="container-fluid col-md-12">
-    <h2>Squad Members</h2>
-
-    <ul class="warriors-test-list">
-      <%= render @warriors %>
-    </ul>
-
-    <div class="container-fluid" id="warriors-list">
+   <div class="container-fluid" id="warriors-list">
         <% if !(@warriors.blank?) %>
           <% @warriors.each do |warrior| %>
             <!-- make this a button to go to the warrior show view -->
@@ -30,12 +32,3 @@
           <% end %>
         <% end %>
     </div>
-</div>
-
-<%= link_to 'New Warrior', new_warrior_path %>
-
-
-<br>
-
-
-

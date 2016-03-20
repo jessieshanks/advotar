@@ -21,7 +21,9 @@ class SquadsController < ApplicationController
   # GET /squads/1.json
   def show
     @squad = current_user.squad
-    @warriors = @squad.warriors
+    @warriors = @squad.Warrior.all
+    puts "squad= "; puts @squad.name
+    puts "warriors= "; puts @warriors
   end
 
   # GET /squads/new

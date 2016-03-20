@@ -64,3 +64,6 @@ gem 'omniauth-oauth2', '~> 1.3.1'
 gem 'omniauth-google-oauth2'
 # gem 'omniauth-evernote'
 
+gem 'sprockets', '~> 3.0'
+gem 'bootstrap-sass'
+gem 'bootstrap'

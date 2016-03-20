@@ -1,0 +1,39 @@
+
+<!-- top of page for most views, navbaresque -->
+
+<nav id="top-bar" class="navbar navbar-default " role="navigation">
+
+    <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <div id="logo">
+            <img src="/assets/advotar_150.png" alt="..." class="img-thumbnail">
+        </div>
+<!--
+        <div class="nav navbar-nav navbar-right">My Squad</div> -->
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="menu-item" id="menu-edit-squad">
+                <%= link_to 'Edit Squad', edit_squad_path(@squad) %>
+            </li>
+            <% if user_signed_in? %>
+              <li class="menu-item loginout" id="menu-logout">
+                 <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+              </li>
+            <% else %>
+              <li class="menu-item loginout" id="menu-login">
+                <%= link_to('Login', new_user_session_path)  %>
+              </li>
+            <% end %>
+        </ul>
+    </div>
+
+</nav>

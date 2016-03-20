@@ -1,4 +1,7 @@
 
+@import "bootstrap-sprockets";
+@import "bootstrap"
+
 #index-main {
   margin: 0% 5% 5% 0%;
   height: 100vh;
@@ -124,9 +127,6 @@ footer p {
     }
 }
 
-
-
-
 @media(min-width:48em){
   #advotar-image {
     opacity: 1;
@@ -150,3 +150,43 @@ footer p {
 
 
 
+/*Header*/
+
+#top-bar {
+  background-color: transparent;
+  border: none;
+  margin: auto 1vw 0 1vw;
+  padding-bottom: 0;
+}
+
+#navbar-collapse {
+  background-color: transparent;
+}
+
+#logo img {
+  border: none;
+  margin-top: 1vh;
+
+}
+
+
+/*Show Squad*/
+
+.page-title-tron {
+  text-align: center;
+  font-family: Bangers;
+  background-color: transparent; !important
+  margin-top: 0;
+  padding: 0;
+}
+
+#show-squad-title h1 {
+  color: #3772FF;
+  font-size: 8.5vw;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#show-squad-motto h3 {
+  font-size: 3vw;
+}

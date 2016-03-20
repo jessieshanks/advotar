@@ -1,23 +1,7 @@
 
 
-<%= render 'layouts/header' %>
-
-
-
-<div class="page-title-tron container-fluid col-md-10 col-md-offset-1" id="sqad-box">
-  <div class="page-title" id="show-squad-title"><h1><%= @squad.name %></h1></div>
-  <div id="show-squad-motto"><h3><%= @squad.motto %></h3></div>
-</div>
-
-
-<div class="container-fluid col-md-12">
-    <h2>Squad Members</h2>
-
-    <ul class="warriors-test-list">
-      <%= render @warriors %>
-    </ul>
-
-    <div class="container-fluid" id="warriors-list">
+<li>
+   <div class="container-fluid" id="warriors-list">
         <% if !(@warriors.blank?) %>
           <% @warriors.each do |warrior| %>
             <!-- make this a button to go to the warrior show view -->
@@ -30,12 +14,13 @@
           <% end %>
         <% end %>
     </div>
-</div>
+</li>
 
-<%= link_to 'New Warrior', new_warrior_path %>
-
-
-<br>
-
-
-
+<li id="warrior-<%= warrior.id %>">
+  <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
+  <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
+  <span class="content"><%= micropost.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+  </span>
+</li>
