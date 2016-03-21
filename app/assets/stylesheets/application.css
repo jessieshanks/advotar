@@ -1,6 +1,12 @@
+/*
+ *= require rails_bootstrap_forms
+ */
 
-@import "bootstrap-sprockets";
+
+/*@import "bootstrap-sprockets";
 @import "bootstrap"
+*/
+
 
 #index-main {
   margin: 0% 5% 5% 0%;
@@ -159,9 +165,9 @@ footer p {
   padding-bottom: 0;
 }
 
-#navbar-collapse {
+/*#navbar-collapse {
   background-color: transparent;
-}
+}*/
 
 #logo img {
   border: none;
@@ -190,3 +196,52 @@ footer p {
 #show-squad-motto h3 {
   font-size: 3vw;
 }
+
+
+/*Form*/
+
+.form-title {
+    font-family: Oswald;
+    font-size: 2vw;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #F038FF;
+    margin: 0 0 4vh 0;
+    padding-top: 0;
+}
+
+label {
+    font-family: 'Alegreya Sans SC';
+    font-size: 1.3vw;
+    letter-spacing: 1.5px;
+}
+
+.form-group input {
+    font-size: 1vw;
+    height: 6vh;
+}
+
+.btn {
+  font-family: 'Alegreya Sans SC';
+  font-size: 1.3vw;
+  letter-spacing: 1.5px;
+  background-color: #3772FF;
+  color: white;
+  height: 7vh;
+  width: 10vw;
+  padding: 0 10vw 0 10vw;
+  margin-top: 3vh;
+}
+
+.btn-default {
+  background: #3772FF;
+}
+
+/*#squad_name {
+    font-weight: bold
+}*/
+
+@media(min-width:34em){
+  .form-title {
+    font-size: 3vw;
+  }

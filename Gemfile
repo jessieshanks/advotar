@@ -67,3 +67,5 @@ gem 'omniauth-google-oauth2'
 gem 'sprockets', '~> 3.0'
 gem 'bootstrap-sass'
 gem 'bootstrap'
+gem 'bootstrap_form'
+gem "nested_form"

@@ -13,13 +13,11 @@
 <div class="container-fluid col-md-12">
     <h2>Squad Members</h2>
 
-    <ul class="warriors-test-list">
-      <%= render @warriors %>
-    </ul>
+
 
     <div class="container-fluid" id="warriors-list">
-        <% if !(@warriors.blank?) %>
-          <% @warriors.each do |warrior| %>
+        <% if !(@squad.warriors.blank?) %>
+          <% @squad.warriors.each do |warrior| %>
             <!-- make this a button to go to the warrior show view -->
             <div class="container-fluid warrior-card col-md-10 col-md-offset-1">
               <h2><%= warrior.name %></h2>
@@ -27,7 +25,9 @@
               <%= link_to 'Edit', edit_warrior_path(warrior) %>
               <%= link_to 'Destroy', warrior, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </div>
-          <% end %>
+           <% end %>
+        <% else %>
+            <% puts "blank" %>
         <% end %>
     </div>
 </div>

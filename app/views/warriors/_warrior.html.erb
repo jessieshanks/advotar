@@ -1,26 +1,8 @@
 
 
-<li>
-   <div class="container-fluid" id="warriors-list">
-        <% if !(@warriors.blank?) %>
-          <% @warriors.each do |warrior| %>
-            <!-- make this a button to go to the warrior show view -->
-            <div class="container-fluid warrior-card col-md-10 col-md-offset-1">
-              <h2><%= warrior.name %></h2>
-              <%= link_to 'Show', warrior %>
-              <%= link_to 'Edit', edit_warrior_path(warrior) %>
-              <%= link_to 'Destroy', warrior, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </div>
-          <% end %>
-        <% end %>
-    </div>
-</li>
-
 <li id="warrior-<%= warrior.id %>">
-  <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
-  <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
-  <span class="content"><%= micropost.content %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
-  </span>
+    <div class="container-fluid warrior-card col-md-10 col-md-offset-1">
+        <!-- <a href="/users/sign_in" class="btn btn-info col-xs-6 col-xs-offset-3 col-s-6 col-s-offset-3 col-md-8 col-md-offset-2" id="login-button" role="button">Get Started</a> -->
+        <%= link_to warrior.name, warrior.squad %>
+    </div>
 </li>

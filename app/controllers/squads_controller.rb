@@ -1,7 +1,5 @@
 class SquadsController < ApplicationController
   # before_action :set_user, :set
-
-
   # before_action :set_squad, only: [:show, :edit, :update, :destroy]
 
 
@@ -18,32 +16,33 @@ class SquadsController < ApplicationController
 
 
   # GET /squads/1
-  # GET /squads/1.json
   def show
     @squad = current_user.squad
-    @warriors = @squad.Warrior.all
-    puts "squad= "; puts @squad.name
-    puts "warriors= "; puts @warriors
+    # @warriors = @squad.Warrior.all
+    # puts "squad= "; puts @squad.name
+    # puts "warriors= "; puts @warriors
   end
+
 
   # GET /squads/new
   def new
     @squad = Squad.new
     @squad.user = current_user
-    current_user
+    @squad.warriors.build
   end
+
 
   # GET /squads/1/edit
   def edit
+    @squad = current_user.squad
   end
 
+
   # POST /squads
-  # POST /squads.json
   def create
     @squad = Squad.new(squad_params)
-
+    # @squad.build_warrior
     respond_to do |format|
-
       if @squad.save
         @squad.users << current_user
         format.html { redirect_to @squad, notice: 'Squad was successfully created.' }
@@ -56,11 +55,10 @@ class SquadsController < ApplicationController
   end
 
 
-
-
   # PATCH/PUT /squads/1
   # PATCH/PUT /squads/1.json
   def update
+    @squad = current_user.squad
     respond_to do |format|
       if @squad.update(squad_params)
         format.html { redirect_to @squad, notice: 'Squad was successfully updated.' }
@@ -111,6 +109,7 @@ class SquadsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def squad_params
-      params.require(:squad).permit(:name, :motto)
+      params.require(:squad).permit(:name, :motto, warriors_attributes: [:id, :name, :birthdate, :color, :squad_id])
     end
+
 end
