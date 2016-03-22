@@ -1,5 +1,6 @@
 /*
- *= require rails_bootstrap_forms
+  *= require rails_bootstrap_forms
+  *= require_tree
  */
 
 
@@ -156,7 +157,7 @@ footer p {
 
 
 
-/*Header*/
+/*/*Header*/
 
 #top-bar {
   background-color: transparent;
@@ -174,9 +175,9 @@ footer p {
   margin-top: 1vh;
 
 }
+*/
 
-
-/*Show Squad*/
+/*/*Show Squad*/
 
 .page-title-tron {
   text-align: center;
@@ -248,7 +249,7 @@ footer p {
 
 /*Form*/
 
-.form-title {
+/*.form-title {
     font-family: Oswald;
     font-size: 2vw;
     letter-spacing: 1px;
@@ -289,7 +290,7 @@ label {
     font-weight: bold
 }*/
 
-@media(min-width:34em){
+/*@media(min-width:34em){
   .form-title {
-    font-size: 3vw;
-  }
+    font-size: 3vw;*/
+  }*/*/

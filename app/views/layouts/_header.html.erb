@@ -21,10 +21,12 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-            <% if @squad.can_edit? %>
-                <li class="menu-item" id="menu-edit-squad">
-                    <%= link_to 'Edit Squad', edit_squad_path(@squad) %>
-                </li>
+            <% if defined?(@squad)%>
+                <% if @squad.can_edit? %>
+                    <li class="menu-item" id="menu-edit-squad">
+                        <%= link_to 'Edit Squad', edit_squad_path(@squad) %>
+                    </li>
+                <% end %>
             <% end %>
             <% if user_signed_in? %>
               <li class="menu-item loginout" id="menu-logout">
