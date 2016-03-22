@@ -6,6 +6,7 @@ class SquadsController < ApplicationController
   # GET /squads
   def index
     if current_user.has_squad?
+      current_user.squad.editable
       @squad = current_user.squad
       render :show
     else
@@ -17,18 +18,15 @@ class SquadsController < ApplicationController
 
   # GET /squads/1
   def show
+    current_user.squad.editable
     @squad = current_user.squad
-    # @warriors = @squad.Warrior.all
-    # puts "squad= "; puts @squad.name
-    # puts "warriors= "; puts @warriors
   end
 
 
   # GET /squads/new
   def new
     @squad = Squad.new
-    @squad.user = current_user
-    @squad.warriors.build
+    # @squad.warriors.build
   end
 
 
@@ -45,6 +43,7 @@ class SquadsController < ApplicationController
     respond_to do |format|
       if @squad.save
         @squad.users << current_user
+        @squad.editable
         format.html { redirect_to @squad, notice: 'Squad was successfully created.' }
         format.json { render :show, status: :created, location: @squad }
       else
@@ -61,6 +60,7 @@ class SquadsController < ApplicationController
     @squad = current_user.squad
     respond_to do |format|
       if @squad.update(squad_params)
+        @squad.editable
         format.html { redirect_to @squad, notice: 'Squad was successfully updated.' }
         format.json { render :show, status: :ok, location: @squad }
       else
@@ -107,7 +107,6 @@ class SquadsController < ApplicationController
     # end
 
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def squad_params
       params.require(:squad).permit(:name, :motto, warriors_attributes: [:id, :name, :birthdate, :color, :squad_id])
     end

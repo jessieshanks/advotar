@@ -21,9 +21,11 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-            <li class="menu-item" id="menu-edit-squad">
-                <%= link_to 'Edit Squad', edit_squad_path(@squad) %>
-            </li>
+            <% if @squad.can_edit? %>
+                <li class="menu-item" id="menu-edit-squad">
+                    <%= link_to 'Edit Squad', edit_squad_path(@squad) %>
+                </li>
+            <% end %>
             <% if user_signed_in? %>
               <li class="menu-item loginout" id="menu-logout">
                  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>

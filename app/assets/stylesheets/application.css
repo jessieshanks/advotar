@@ -197,6 +197,54 @@ footer p {
   font-size: 3vw;
 }
 
+#warriors-list {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.warrior-card {
+  height: 18vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.warrior-card h2 {
+  font-family: Bangers;
+  font-size: 4vw;
+  z-index: 1;
+}
+
+#test-id {
+  z-index: 2;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: transparent;
+  text-align: center;
+  font-size: 1.3vw;
+  height: 12vh;
+  color: black;
+  display: flex;
+  align-items: center;
+  border: black;
+}
+
+#test-id a {
+  color: black;
+}
+
+#test-id a {
+  color: black;
+}
+
+#test-id:hover {
+  background-color: white;
+}
+
 
 /*Form*/
 

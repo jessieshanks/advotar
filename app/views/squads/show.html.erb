@@ -11,31 +11,26 @@
 
 
 <div class="container-fluid col-md-12">
-    <h2>Squad Members</h2>
+    <!-- <h2>Squad Members</h2> -->
 
-
-
-    <div class="container-fluid" id="warriors-list">
+    <div class="container-fluid col-md-10 col-md-offset-1" id="warriors-list">
         <% if !(@squad.warriors.blank?) %>
           <% @squad.warriors.each do |warrior| %>
             <!-- make this a button to go to the warrior show view -->
-            <div class="container-fluid warrior-card col-md-10 col-md-offset-1">
+            <div class="container-fluid warrior-card col-md-8" style="background:<%=warrior.color%>;">
               <h2><%= warrior.name %></h2>
-              <%= link_to 'Show', warrior %>
-              <%= link_to 'Edit', edit_warrior_path(warrior) %>
-              <%= link_to 'Destroy', warrior, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <div class="col-md-3 active warrior-docs-button" id="test-id" role="button">
+                  <%= link_to('Manage Documents', warrior_path(warrior)) %>
+              </div>
+              <!-- <input class="btn btn-large warrior-docs-button col-md-3" value="manage documents"> -->
             </div>
            <% end %>
         <% else %>
             <% puts "blank" %>
         <% end %>
     </div>
+
 </div>
-
-<%= link_to 'New Warrior', new_warrior_path %>
-
-
-<br>
 
 
 
