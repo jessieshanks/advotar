@@ -1,3 +1,13 @@
+/*
+  *= require rails_bootstrap_forms
+  *= require_tree
+ */
+
+
+/*@import "bootstrap-sprockets";
+@import "bootstrap"
+*/
+
 
 
 @import url(https://fonts.googleapis.com/css?family=Bangers|Oswald:400,900italic,900,800italic,800,700italic|Roboto|Molengo);
@@ -130,9 +140,6 @@ footer p {
     }
 }
 
-
-
-
 @media(min-width:48em){
   #advotar-image {
     opacity: 1;
@@ -156,3 +163,140 @@ footer p {
 
 
 
+/*/*Header*/
+
+#top-bar {
+  background-color: transparent;
+  border: none;
+  margin: auto 1vw 0 1vw;
+  padding-bottom: 0;
+}
+
+/*#navbar-collapse {
+  background-color: transparent;
+}*/
+
+#logo img {
+  border: none;
+  margin-top: 1vh;
+
+}
+*/
+
+/*/*Show Squad*/
+
+.page-title-tron {
+  text-align: center;
+  font-family: Bangers;
+  background-color: transparent; !important
+  margin-top: 0;
+  padding: 0;
+}
+
+#show-squad-title h1 {
+  color: #3772FF;
+  font-size: 8.5vw;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#show-squad-motto h3 {
+  font-size: 3vw;
+}
+
+#warriors-list {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.warrior-card {
+  height: 18vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.warrior-card h2 {
+  font-family: Bangers;
+  font-size: 4vw;
+  z-index: 1;
+}
+
+#test-id {
+  z-index: 2;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: transparent;
+  text-align: center;
+  font-size: 1.3vw;
+  height: 12vh;
+  color: black;
+  display: flex;
+  align-items: center;
+  border: black;
+}
+
+#test-id a {
+  color: black;
+}
+
+#test-id a {
+  color: black;
+}
+
+#test-id:hover {
+  background-color: white;
+}
+
+
+/*Form*/
+
+/*.form-title {
+    font-family: Oswald;
+    font-size: 2vw;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #F038FF;
+    margin: 0 0 4vh 0;
+    padding-top: 0;
+}
+
+label {
+    font-family: 'Alegreya Sans SC';
+    font-size: 1.3vw;
+    letter-spacing: 1.5px;
+}
+
+.form-group input {
+    font-size: 1vw;
+    height: 6vh;
+}
+
+.btn {
+  font-family: 'Alegreya Sans SC';
+  font-size: 1.3vw;
+  letter-spacing: 1.5px;
+  background-color: #3772FF;
+  color: white;
+  height: 7vh;
+  width: 10vw;
+  padding: 0 10vw 0 10vw;
+  margin-top: 3vh;
+}
+
+.btn-default {
+  background: #3772FF;
+}
+
+/*#squad_name {
+    font-weight: bold
+}*/
+
+/*@media(min-width:34em){
+  .form-title {
+    font-size: 3vw;*/
+  }*/*/

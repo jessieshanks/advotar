@@ -1,0 +1,69 @@
+
+<!-- from squad show view -->
+
+<%= link_to 'New Warrior', new_warrior_path %>
+
+<%= link_to 'Edit', edit_squad_path(@squad) %> |
+<%= link_to 'Back', squads_path %>
+
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @squad.name %>
+</p>
+
+<p>
+  <strong>Motto:</strong>
+  <%= @squad.motto %>
+</p>
+
+   <div class="container-fluid" id="warriors-list">
+        <% if !(@warriors.blank?) %>
+          <% @warriors.each do |warrior| %>
+            <!-- make this a button to go to the warrior show view -->
+            <div class="container-fluid warrior-card col-md-10 col-md-offset-1">
+              <h2><%= warrior.name %></h2>
+              <%= link_to 'Show', warrior %>
+              <%= link_to 'Edit', edit_warrior_path(warrior) %>
+              <%= link_to 'Destroy', warrior, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </div>
+          <% end %>
+        <% end %>
+    </div>
+
+<ul class="warriors-test-list">
+      <%= render @warriors %>
+    </ul>
+
+
+   /// from form view
+
+    <%= form_for @squad, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+
+    <% if @squad.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@squad.errors.count, "error") %> prohibited this squad from being saved:</h2>
+
+        <ul>
+        <% @squad.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+   <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :motto %><br>
+      <%= f.text_area :motto %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

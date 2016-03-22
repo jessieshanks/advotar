@@ -1,6 +1,16 @@
-<h1>Editing Squad</h1>
 
-<%= render 'form' %>
+<section class="form-section">
 
-<%= link_to 'Show', @squad %> |
-<%= link_to 'Back', squads_path %>
+    <%= render 'layouts/header' %>
+
+    <h2 class="form-title col-xs-12 col-sm-12 col-md-8 col-md-offset-2">Edit Squad & Squad Members</h2>
+
+    <%= render 'form' %>
+
+    <%= link_to 'Show', @squad %> |
+    <%= link_to 'Back', squads_path %>
+
+</section>
+
+
+<%= link_to 'New Warrior', new_warrior_path %>
