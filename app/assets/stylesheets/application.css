@@ -82,6 +82,8 @@
   height: 2.6em;
   padding: .8em;
   margin-top: 30vh;
+  display: flex;
+  justify-content: center;
 }
 
 #login-button:hover {
