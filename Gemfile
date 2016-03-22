@@ -64,13 +64,11 @@ gem 'omniauth-oauth2', '~> 1.3.1'
 gem 'omniauth-google-oauth2'
 # gem 'omniauth-evernote'
 
-<<<<<<< HEAD
+
 #heroku gem
 gem 'rails_12factor', group: :production
-=======
 gem 'sprockets', '~> 3.0'
 gem 'bootstrap-sass'
 gem 'bootstrap'
 gem 'bootstrap_form'
 gem "nested_form"
->>>>>>> squad-login-views
