@@ -6,12 +6,14 @@ class SquadsController < ApplicationController
   # GET /squads
   def index
     if current_user.has_squad?
-      current_user.squad.editable
-      @squad = current_user.squad
-      render :show
+      # current_user.squad.editable
+      # @squad = current_user.squad
+      # render :show
+      redirect_to squad_path(current_user.squad)
     else
-      @squad = Squad.new
-      render :new
+      # @squad = Squad.new
+      # render :new
+      redirect_to new_squad_path
     end
   end
 
