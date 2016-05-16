@@ -14,10 +14,6 @@
             <div class="column col-xs-5 col-sm-5 col-md-2 color-field"><%=warrior_form.collection_select :color, Warrior::COLORS, :to_s, :to_s, :include_blank => true %></div>
             <%= warrior_form.link_to_remove "Remove this child" %>
         <% end %>
-
-
-
-
     </div>
     <p><%= f.link_to_add "Add a child", :warriors %></p>
     <div class="btn" id="add-warrior-button">Add Child</div>

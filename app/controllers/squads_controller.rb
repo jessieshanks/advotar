@@ -23,7 +23,6 @@ class SquadsController < ApplicationController
   # GET /squads/new
   def new
     @squad = Squad.new
-    # @squad.warriors.build
   end
 
 
