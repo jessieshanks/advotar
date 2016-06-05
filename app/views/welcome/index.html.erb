@@ -2,28 +2,25 @@
 
 <div class="container-fluid" id="index-main">
 
-
     <div class="container container-fluid" id="title-container">
           <div class="column col-xs-12 col-sm-12 col-md-3 col-lg-3 col-lg-offset-1">
             <h1>Advotar</h1>
           </div>
 
           <div class="column col-xs-12 col-sm-12 col-md-3 col-md-offset-2">
-            <a href="/users/sign_in" class="btn btn-info col-xs-6 col-xs-offset-3 col-s-6 col-s-offset-3 col-md-8 col-md-offset-2" id="login-button" role="button">Get Started</a>
+            <a data-toggle="modal" href="#login-modal" class="btn btn-info col-xs-6 col-xs-offset-3 col-s-6 col-s-offset-3 col-md-8 col-md-offset-2" id="login-button" role="button">Get Started</a>
+            <%= render "welcome/login_modal" %>
           </div>
     </div>
-
 
     <div class="container container-fluid col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="advotar-container">
         <img src="/assets/advotar.jpg" class="img-fluid" id="advotar-image">
     </div>
 
-
     <div class="container container-fluid col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="index-text">
         <h3>Organization Tool for Parent-Advocates And their Superhero Squads</h3>
         <p class="col-md-10 col-md-offset-1">Advotar is an organization tool for parent-advocates of kids with special needs. Store reports and evaluations, and track your care providers. Everything you need in one place to prepare for an IEP/504 or bring a new provider into the loop. We harness the power of Google apps to keep all your info in one easy location, so you'll need a Google account to get started.</p>
     </div>
-
 
 </div>
 
