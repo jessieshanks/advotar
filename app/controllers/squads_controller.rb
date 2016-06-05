@@ -6,13 +6,8 @@ class SquadsController < ApplicationController
   # GET /squads
   def index
     if current_user.has_squad?
-      # current_user.squad.editable
-      # @squad = current_user.squad
-      # render :show
       redirect_to squad_path(current_user.squad)
     else
-      # @squad = Squad.new
-      # render :new
       redirect_to new_squad_path
     end
   end
@@ -28,7 +23,6 @@ class SquadsController < ApplicationController
   # GET /squads/new
   def new
     @squad = Squad.new
-    # @squad.warriors.build
   end
 
 
@@ -90,10 +84,6 @@ class SquadsController < ApplicationController
 
     def set_squad
         @squad = current_user.squad
-        puts "/n/n/n"
-        puts @squad
-        puts "squad ^^^"
-        puts (@squad="")
     end
 
     # def set_squad
