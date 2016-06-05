@@ -9,6 +9,12 @@
 */
 
 
+
+@import url(https://fonts.googleapis.com/css?family=Bangers|Oswald:400,900italic,900,800italic,800,700italic|Roboto|Molengo);
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css);
+
+
+
 #index-main {
   margin: 0% 5% 5% 0%;
   height: 100vh;
@@ -82,42 +88,13 @@
   height: 2.6em;
   padding: .8em;
   margin-top: 30vh;
-  border: none;
-  display: flex;
-  justify-content: center;
 }
 
-
-#login-modal-content {
+#login-button:hover {
   background-color: #E2EF70;
-  height: 50vh;
-  margin-top: 10vh;
-  border: none;
-  outline: none;
-}
-
-#modal-part {
-  border: none;
-}
-
-.modal-body {
-  margin-top: 4vh;
-}
-
-#login-modal-button {
-  background-color: #3772FF;
-  color: black;
-  font: 25px 'Bangers';
-  height: 3em;
-  padding: .8em;
-  border: none;
-  margin-top: 5vh;
 }
 
 
-#login-modal-button i {
-  margin-right: 1em;
-}
 
 
 
@@ -130,10 +107,6 @@ html {
 
 body {
   background-color: white;
-}
-
-.btn:hover {
-  opacity: .8;
 }
 
 footer {

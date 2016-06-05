@@ -64,6 +64,9 @@ gem 'omniauth-oauth2', '~> 1.3.1'
 gem 'omniauth-google-oauth2'
 # gem 'omniauth-evernote'
 
+
+#heroku gem
+gem 'rails_12factor', group: :production
 gem 'sprockets', '~> 3.0'
 gem 'bootstrap-sass'
 gem 'bootstrap'
