@@ -17,7 +17,7 @@
         <% if !(@squad.warriors.blank?) %>
           <% @squad.warriors.each do |warrior| %>
             <!-- make this a button to go to the warrior show view -->
-            <div class="container-fluid warrior-card col-md-8" style="background:<%=@warrior.color%>;">
+            <div class="container-fluid warrior-card col-md-8" >
               <h2><%= warrior.name %></h2>
               <div class="col-md-3 active warrior-docs-button" id="test-id" role="button">
                   <%= link_to('Manage Documents', warrior_path(warrior)) %>

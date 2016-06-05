@@ -67,3 +67,9 @@
       <%= f.submit %>
     </div>
 <% end %>
+
+
+
+squads show view:
+            <div class="container-fluid warrior-card col-md-8" style="background:<%=@warrior.color%>;">
+
