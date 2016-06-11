@@ -9,6 +9,7 @@
 
 
 
+/*<<<<<<< HEAD
 #index-main {
   margin: 0% 5% 5% 0%;
   height: 100vh;
@@ -120,7 +121,7 @@
 }
 
 
-
+*/
 
 
 html {
@@ -150,43 +151,6 @@ footer p {
   margin: 0;
   padding: 0;
 }
-
-
-@media(min-width:34em){
-  #title-container h1 {
-    font-size: 140px;
-  }
-   #login-button {
-    margin-top: 33vh;
-  }
-  #index-text h3 {
-  font: 30px Bangers;
-}
-  #login-button {
-      margin-top: 35vh;
-    }
-}
-
-@media(min-width:48em){
-  #advotar-image {
-    opacity: 1;
-    filter: alpha(opacity=100);
-  }
-  #login-button {
-    margin-top: 7vh;
-  }
-  #index-text {
-    background-color: white;
-  }
-  #index-text p {
-    visibility: visible;
-  }
-  footer {
-    visibility: visible;
-  }
-  #index-text h3 {
-  font: 36px Bangers;
-  }
 
 
 
@@ -325,5 +289,5 @@ label {
 
 /*@media(min-width:34em){
   .form-title {
-    font-size: 3vw;*/
-  }*/*/
+    font-size: 3vw;}*/
+
