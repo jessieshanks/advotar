@@ -42,34 +42,17 @@
   font-family: Bangers;
   font-size: 4vw;
   z-index: 1;
+  justify-content: flex-start;
+  text-decoration: none;
 }
 
-#test-id {
-  z-index: 2;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  background-color: transparent;
-  text-align: center;
-  font-size: 1.3vw;
-  height: 12vh;
-  color: black;
-  display: flex;
-  align-items: center;
-  border: black;
-}
-
-#test-id a {
+.warrior-card:hover {
+  opacity: .6;
   color: black;
 }
 
-#test-id a {
-  color: black;
-}
 
-#test-id:hover {
-  background-color: white;
-}
+
 
 
 /*Form*/
