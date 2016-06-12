@@ -9,119 +9,6 @@
 
 
 
-/*<<<<<<< HEAD
-#index-main {
-  margin: 0% 5% 5% 0%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-#advotar-image {
-  max-width: 100%;
-  height: 100vh;
-  opacity: 0.2;
-  filter: alpha(opacity=30);
-  display: block;
-  margin: auto;
-}
-
-#advotar-container {
-    height: 100vh;
-    background-color: transparent;
-    position: absolute;
-    overflow: hidden;
-    margin-top: 0vh;
-    z-index: -1;
-}
-
-
-
-
-
-#title-container {
-  background-color: transparent;
-  height: 20%;
-  align-self: flex-start;
-  position: absolute;
-  margin-top: 2vh;
-}
-
-#title-container h1 {
-  color: #3772FF;
-  text-align: center;
-  font: 100px Bangers;
-  padding: 0;
-}
-
-
-
-#index-text {
-  background-color: transparent;
-  align-self: flex-end;
-  height: 22vh;
-}
-
-#index-text h3 {
-  font: 22px Bangers;
-  font-weight: bolder;
-  text-align: center;
-}
-
-#index-text p {
-  font: 18px 'Oswald';
-  visibility: hidden;
-}
-
-
-#login-button {
-  background-color: #F038FF;
-  color: black;
-  font: 25px 'Bangers';
-  height: 2.6em;
-  padding: .8em;
-  margin-top: 30vh;
-  border: none;
-  width: 10vw;
-  display: flex;
-  justify-content: center;
-}
-
-
-#login-modal-content {
-  background-color: #E2EF70;
-  height: 50vh;
-  margin-top: 10vh;
-  border: none;
-  outline: none;
-}
-
-#modal-part {
-  border: none;
-}
-
-.modal-body {
-  margin-top: 4vh;
-}
-
-#login-modal-button {
-  background-color: #3772FF;
-  color: black;
-  font: 25px 'Bangers';
-  height: 3em;
-  padding: .8em;
-  border: none;
-  margin-top: 5vh;
-}
-
-#login-modal-button i {
-  margin-right: 1em;
-}
-
-
-*/
 
 
 html {
@@ -154,7 +41,7 @@ footer p {
 
 
 
-/*/*Header*/
+/** Header **/
 
 #top-bar {
   background-color: transparent;
@@ -174,7 +61,7 @@ footer p {
 }
 */
 
-/*/*Show Squad*/
+/** Show Squad **/
 
 .page-title-tron {
   text-align: center;
@@ -243,51 +130,4 @@ footer p {
   background-color: white;
 }
 
-
-/*Form*/
-
-/*.form-title {
-    font-family: Oswald;
-    font-size: 2vw;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #F038FF;
-    margin: 0 0 4vh 0;
-    padding-top: 0;
-}
-
-label {
-    font-family: 'Alegreya Sans SC';
-    font-size: 1.3vw;
-    letter-spacing: 1.5px;
-}
-
-.form-group input {
-    font-size: 1vw;
-    height: 6vh;
-}
-
-.btn {
-  font-family: 'Alegreya Sans SC';
-  font-size: 1.3vw;
-  letter-spacing: 1.5px;
-  background-color: #3772FF;
-  color: white;
-  height: 7vh;
-  width: 10vw;
-  padding: 0 10vw 0 10vw;
-  margin-top: 3vh;
-}
-
-.btn-default {
-  background: #3772FF;
-}
-
-/*#squad_name {
-    font-weight: bold
-}*/
-
-/*@media(min-width:34em){
-  .form-title {
-    font-size: 3vw;}*/
 
