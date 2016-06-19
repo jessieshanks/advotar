@@ -2,8 +2,8 @@ class Squad < ActiveRecord::Base
 
   has_many :squad_users
   has_many :users, :through => :squad_users
-  has_many :warriors
-  accepts_nested_attributes_for :warriors, allow_destroy: true
+  has_many :warriors, :dependent => :destroy
+  accepts_nested_attributes_for :warriors, :reject_if => lambda {|a| a[:name].blank? }, :allow_destroy => true
 
 
   attr_accessor :can_edit
