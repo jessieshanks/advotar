@@ -100,7 +100,7 @@ class SquadsController < ApplicationController
 
 
     def squad_params
-      params.require(:squad).permit(:name, :motto, warriors_attributes: [:id, :name, :birthdate, :color, :squad_id])
+      params.require(:squad).permit(:id, :name, :motto, warriors_attributes: [:id, :name, :birthdate, :color, :_destroy])
     end
 
 end

@@ -2,8 +2,14 @@ class Squad < ActiveRecord::Base
 
   has_many :squad_users
   has_many :users, :through => :squad_users
+<<<<<<< HEAD
   has_many :warriors,  :dependent => :destroy
   accepts_nested_attributes_for :warriors, :reject_if => lambda { |a| a[:name].blank? }, :allow_destroy => true
+=======
+  has_many :warriors, :dependent => :destroy
+  accepts_nested_attributes_for :warriors, :reject_if => lambda {|a| a[:name].blank? }, :allow_destroy => true
+
+>>>>>>> squad-login-views
 
   attr_accessor :can_edit
   alias :can_edit? :can_edit

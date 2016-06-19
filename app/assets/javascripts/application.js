@@ -13,5 +13,26 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+<<<<<<< HEAD
 //= require_tree
 //= require jquery_nested_form
+=======
+//= require_tree .
+
+
+$('.add_child').click(function() {
+    var association = $(this).attr('data-association');
+    var target = $(this).attr('target');
+    var regexp = new RegExp('new_' + association, 'g');
+    var new_id = new Date().getTime();
+    var Dest = (target == '') ? $(this).parent() : $('#'+target);
+    Dest.append(window[association+'_fields'].replace(regexp, new_id));
+    return false;
+});
+
+$(document).delegate('.remove_child','click', function() {
+    $(this).parent().children('.removable')[0].value = 1;
+    $(this).parent().hide();
+    return false;
+});
+>>>>>>> squad-login-views
