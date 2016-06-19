@@ -69,6 +69,6 @@ class WarriorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def warrior_params
-      params.require(:warrior).permit(:name, :birthdate)
+      params.require(:warrior).permit(:id, :name, :birthdate, :color, :_destroy)
     end
 end
