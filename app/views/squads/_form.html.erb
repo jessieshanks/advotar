@@ -1,27 +1,41 @@
 
 <!-- form for editing squad and its warriors -->
-    <div class="container-fluid col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-      <%= bootstrap_nested_form_for(@squad) do |f| %>
-        <%= f.text_field :name %>
-        <%= f.text_field :motto %>
-        <div class="container-fluid col-xs-11 col-xs-offset-1 col-sm-1 col-sm-offset-1 col-md-2 subform">
-            Children
-        </div>
-        <div class="row col-xs-11 col-xs-offset-1 col-sm-11 col-sm-offset-1 col-md-12 subform">
-            <%= f.fields_for :warriors do |warrior_form| %>
-                <div class="column col-xs-12 col-sm-12 col-md-6 warrior-name"><%= warrior_form.text_field :name %></div>
-                <div class="column col-xs-7 col-sm-7 col-md-3 date-field"><%= warrior_form.date_field :birthdate %></div>
-                <div class="column col-xs-5 col-sm-5 col-md-2 color-field"><%=warrior_form.collection_select :color, Warrior::COLORS, :to_s, :to_s, :include_blank => true %></div>
-                <%= warrior_form.link_to_remove "Remove this child" %>
-            <% end %>
-        </div>
-        <p><%= f.link_to_add "Add a child", :warriors %></p>
-        <div class="btn" id="add-warrior-button">Add Child</div>
-        <div class="row">
-        <%= f.submit "Save Squad" %>
-          </div>
+
+<div class="container-fluid col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+  <%= bootstrap_nested_form_for(@squad) do |f| %>
+    <%= f.text_field :name %>
+    <%= f.text_field :motto %>
+    <div class="container-fluid col-xs-11 col-xs-offset-1 col-sm-1 col-sm-offset-1 col-md-2 subform">
+        Children
+    </div>
+    <div class="row col-xs-11 col-xs-offset-1 col-sm-11 col-sm-offset-1 col-md-12 subform">
+        <%= f.fields_for :warriors do |warrior_form| %>
+            <div class="column col-xs-12 col-sm-12 col-md-6 warrior-name"><%= warrior_form.text_field :name %></div>
+            <div class="column col-xs-7 col-sm-7 col-md-3 date-field"><%= warrior_form.date_field :birthdate %></div>
+            <div class="column col-xs-5 col-sm-5 col-md-2 color-field"><%=warrior_form.collection_select :color, Warrior::COLORS, :to_s, :to_s, :include_blank => true %></div>
+            <%= warrior_form.link_to_remove "Remove this child" %>
         <% end %>
     </div>
+    <p><%= f.link_to_add "Add a child", :warriors %></p>
+    <div class="btn" id="add-warrior-button">Add Child</div>
+
+    <!-- This is the added piece I am working on -->
+    <%= add_child_button "New Warrior",:warriors,"#warriors" %>
+    <%= new_fields_template f, :warriors %>
+    <div id="warriors" style="border:1px solid #777;">
+      <%= f.fields_for :warriors do |builder| %>
+        <div>
+            <%= render "warrior_form", :f => builder %>
+        </div>
+      <% end %>
+    </div>
+    <!-- end of added piece -->
+
+    <div class="row">
+    <%= f.submit "Save Squad" %>
+      </div>
+    <% end %>
+</div>
 
 
 

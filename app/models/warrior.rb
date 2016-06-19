@@ -4,7 +4,7 @@ class Warrior < ActiveRecord::Base
 
   COLORS = ["#3772FF","#F038FF","#F2FF49","#FF4242","#36FA32"]
   # color_name: ["blue", "purple", "yellow", "red", "green" ]
-
+  # this constant allows for creation of drop down list of warrior colors
 
 end
 
