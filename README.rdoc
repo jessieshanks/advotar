@@ -19,4 +19,4 @@ Libraries: Bootstrap, JQuery.
 User authentication, setting up squad working successfully.
 Next steps: add paperclip, debug form so that it works for adding and deleing children from nested form.
 
-
+.
