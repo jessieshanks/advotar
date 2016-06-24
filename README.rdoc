@@ -1,4 +1,4 @@
-<h1>Advotar</h1>
+Advotar
 
 Jessie Shanks, developer
 
