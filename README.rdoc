@@ -1,28 +1,22 @@
-== README
+<h1>Advotar</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Jessie Shanks, developer
 
-Things you may want to cover:
+www.advotar.herokuapps.com
 
-* Ruby version
+Advotar is an organization tool for parent-advocates of kids with special needs.
+Set up a "squad" or family hq, to store reports and evaluations for each child.
+Everything you need in one place to prepare for an IEP/504 or bring a new provider into the loop.
 
-* System dependencies
+__________________________________________________________________
 
-* Configuration
+Built in Rails.
+Uses PostgreSQL.
 
-* Database creation
+User authentication through Google with Devise, Omniauth.
+Libraries: Bootstrap, JQuery.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+User authentication, setting up squad working successfully.
+Next steps: add paperclip, debug form so that it works for adding and deleing children from nested form.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
