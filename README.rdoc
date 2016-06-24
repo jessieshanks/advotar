@@ -2,7 +2,7 @@ Advotar
 
 Jessie Shanks, developer
 
-www.advotar.herokuapps.com
+https://advotar.herokuapp.com
 
 Advotar is an organization tool for parent-advocates of kids with special needs.
 Set up a "squad" or family hq, to store reports and evaluations for each child.
